@@ -1,0 +1,70 @@
+.shipping_policy_section .content_area {
+    padding-bottom: 20px;
+}
+
+.shipping_policy_section .content_area .cnt_wrap p + p,
+.shipping_policy_section .cnt_wrap p + p {
+    padding-top: 10px;
+}
+
+.shipping_policy_section .policy_block {
+    padding-top: 30px;
+}
+
+.shipping_policy_section .policy_list {
+    padding-left: 1em;
+    margin: 12px 0 0;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.shipping_policy_section .policy_list li {
+    margin-bottom: 10px;
+}
+
+.shipping_policy_section .policy_list li:last-child {
+    margin-bottom: 0;
+}
+
+.shipping_policy_section .underline_title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.shipping_policy_section strong {
+    font-weight: 600;
+}
+
+.shipping_policy_section .shipping_tagline {
+    font-weight: 600;
+    padding-top: 16px;
+}
+
+/* reuse the icon-row styling from the contact page for Section 13 */
+.shipping_policy_section .customer_support_list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 10px;
+}
+
+.shipping_policy_section .customer_support_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shipping_policy_section .customer_support_item .svg_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.shipping_policy_section .customer_support_item .svg_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
