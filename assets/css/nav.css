@@ -79,35 +79,119 @@
 }
 
 .icon_group svg {
-    width: min(max(1.5625rem,2.6042vw),3.125rem);
+    width: min(max(1.5625rem, 2.6042vw), 3.125rem);
     height: 25px;
     stroke: var(--text);
     cursor: pointer;
 }
 
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.nav-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.menu-close {
+    display: none;
+}
+
+.hamburger-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .nav_item {
-        gap: 16px;
+    .navbar .nav__wrap .main-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 88%;
+        max-width: 380px;
+        height: 100%;
+        max-height: none;
+        overflow: hidden;
+        opacity: 1;
+        background: #fbfaf8;
+        border-radius: 0;
+        box-shadow: 0 0 40px rgb(0 0 0 / 25%);
+        padding: 28px 32px;
+        transform: translateX(-100%);
+        transition: transform 0.35s ease;
+        z-index: 1002;
     }
 
-    .nav_items {
-        font-size: 12px;
+    .hamburger-toggle {
+        display: block;
     }
 
-    .nav_right {
-        gap: 20px;
+    .navbar .nav__wrap .main-menu.is-open {
+        transform: translateX(0);
+        padding: 28px 32px;
     }
 
-    .logo_wordmark {
-        font-size: 18px;
-        letter-spacing: 1.5px;
-    }
-    
-    .icon_group {
-        gap: 14px;
+    .menu-close {
+        background: none;
+        border: none;
+        padding: 0;
+        margin-bottom: 40px;
+        cursor: pointer;
+        display: flex;
     }
 
-    .custom-container {
-        padding: 0 16px;
+    .menu-close svg {
+        width: 22px;
+        height: 22px;
+        stroke: #111;
+    }
+
+    .main-menu .nav_item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .main-menu .nav_items {
+        width: 100%;
+        text-align: left;
+        padding: 18px 0;
+        border-bottom: none;
+        border-radius: 0;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        display: block;
+        color: #111;
+    }
+
+    .main-menu .nav_items a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+
+    .main-menu .nav_items::after {
+        content: none;
+    }
+
+    .main-menu .nav_items:hover,
+    .main-menu .nav_items:active {
+        background-color: transparent;
+        color: #000;
+    }
+
+    .navbar .nav__wrap {
+        position: relative;
+        z-index: 1001;
     }
 }
