@@ -24,3 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.addEventListener('click', closeMenu);
     backdrop.addEventListener('click', closeMenu);
 });
+
+
+
