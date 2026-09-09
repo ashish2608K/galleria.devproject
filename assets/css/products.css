@@ -288,3 +288,44 @@
     .filter-group summary{ width:100%; justify-content:center; display:flex; }
     .filter-group .filter-body{ left:0; right:0; min-width:0; width:100%; }
   }
+
+
+  /* Arrow icon: hidden on desktop (sidebar is always expanded there) */
+.arrow-icon{
+  display:none;
+  margin-left:10px;
+  transition: transform 0.2s ease;
+}
+.filter-group[open] .arrow-icon{
+  transform: rotate(180deg);
+}
+
+/* remove the old broken rule that did nothing: */
+/*
+.filter-group[open] summary
+.filter-group summary::after{
+  content:"▾";
+  ...
+}
+*/
+
+@media (max-width:1199px){
+  /* show the arrow only in the pill/dropdown mode */
+  .arrow-icon{ display:inline-flex; align-items:center; }
+
+  /* closed by default: only show the body when the <details> is actually open */
+  .filter-group .filter-body{
+    display:none;
+  }
+  .filter-group[open] .filter-body{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+}
+
+@media (max-width:767px){
+  .price-filter-group{
+    display:none;
+  }
+}
