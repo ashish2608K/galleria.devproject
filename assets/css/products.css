@@ -328,4 +328,8 @@
   .price-filter-group{
     display:none;
   }
+
+  .filter-group.price-bar {
+    display: none;
+  }
 }
