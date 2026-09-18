@@ -6,7 +6,8 @@ const products = [
   },
   {
     id: "black-basic-tee", name: "Black to Basic Tee", brand: "Nike", category: "T-Shirts", price: 150, tag: "", rating: 4.2, reviews: 21, img: "https://picsum.photos/seed/blacktee/700/840",
-    desc: "desPremium Sound. Smarter Noise Control. All-Day Comfort.Experience an immersive listening experience with  Buds Pro (2nd generation) engineered to deliver rich, detailed audio while giving you greater control over the sounds around you. Powered by the Shop Galleria Buds Pro 2 combines powerful  Noise Cancellation, Adaptive Transparency, Personalised Spatial Audio and intuitive touch controls in a compact, comfortable design. "},
+    desc: "desPremium Sound. Smarter Noise Control. All-Day Comfort.Experience an immersive listening experience with  Buds Pro (2nd generation) engineered to deliver rich, detailed audio while giving you greater control over the sounds around you. Powered by the Shop Galleria Buds Pro 2 combines powerful  Noise Cancellation, Adaptive Transparency, Personalised Spatial Audio and intuitive touch controls in a compact, comfortable design. "
+  },
   {
     id: "soft-hoodie", name: "Soft Hoodie", brand: "Adidas", category: "Sweaters", price: 250, tag: "", rating: 4.8, reviews: 52, img: "https://picsum.photos/seed/softhoodie/700/840",
     desc: "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket."
@@ -19,7 +20,7 @@ const products = [
     id: "lawyer-suit", name: "One Set Lawyer Suit", brand: "Zara", category: "Overhemden", price: 150, tag: "", rating: 4.4, reviews: 19, img: "https://picsum.photos/seed/lawyersuit/700/840",
     desc: "A tailored two-piece set with a structured shoulder and a clean, minimal silhouette suited for the office or a night out."
   },
- 
+
 ];
 
 const state = { search: "", brands: new Set(), categories: new Set(), maxPrice: 500 };
@@ -105,7 +106,7 @@ function cardHTML(p) {
             <div class="cnt_wrap">
               <p>$${p.price}</p>
               <div class="product_button">
-                <<a href="product-detail.html?id=${p.id}" class="buy_now_btn">Buy Now</a>
+                <a href="product-detail.html?id=${p.id}" class="buy_now_btn">Buy Now</a>
               </div>
             </div>
           </div>
@@ -122,23 +123,34 @@ function render() {
   document.getElementById('resultCount').textContent = `${filtered.length} product${filtered.length === 1 ? '' : 's'}`;
 }
 
-document.getElementById('searchInput').addEventListener('input', (e) => {
-  state.search = e.target.value;
-  render();
-});
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    state.search = e.target.value;
+    render();
+  });
+}
 
-document.getElementById('resetFilters').addEventListener('click', () => {
-  state.search = "";
-  state.brands.clear();
-  state.categories.clear();
-  document.getElementById('searchInput').value = "";
-  document.querySelectorAll('.brand-check, .cat-check').forEach(cb => cb.checked = false);
-  const priceRange = document.getElementById('priceRange');
-  priceRange.value = priceRange.max;
-  state.maxPrice = Number(priceRange.max);
-  document.getElementById('priceValue').textContent = state.maxPrice;
+const resetBtn = document.getElementById('resetFilters');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    state.search = "";
+    state.brands.clear();
+    state.categories.clear();
+    document.getElementById('searchInput').value = "";
+    document.querySelectorAll('.brand-check, .cat-check').forEach(cb => cb.checked = false);
+    const priceRange = document.getElementById('priceRange');
+    priceRange.value = priceRange.max;
+    state.maxPrice = Number(priceRange.max);
+    document.getElementById('priceValue').textContent = state.maxPrice;
+    render();
+  });
+}
+
+if (document.getElementById('productGrid')) {
+  buildFilterOptions();
   render();
-});
+}
 
 buildFilterOptions();
 render();
