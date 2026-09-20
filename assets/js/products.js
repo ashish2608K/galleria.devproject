@@ -1,26 +1,64 @@
-// ---------------- DEMO PRODUCT DATA ----------------
 const products = [
   {
-    id: "green-outer", name: "Japan Green Outer", brand: "Uniqlo", category: "Jassen", price: 399, tag: "Best Seller", rating: 4.6, reviews: 38, img: "https://picsum.photos/seed/greenouter/700/840",
+    id: "green-outer",
+    name: "Japan Green Outer",
+    brand: "Uniqlo",
+    category: "Jassen",
+    price: 399,
+    tag: "Best Seller",
+    rating: 4.6,
+    reviews: 38,
+    img: "https://picsum.photos/seed/greenouter/700/840",
     desc: "Loose-fit outer jacket in a medium-weight cotton-blend fabric with a relaxed, roomy silhouette. Drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Soft, brushed inside."
   },
   {
-    id: "black-basic-tee", name: "Black to Basic Tee", brand: "Nike", category: "T-Shirts", price: 150, tag: "", rating: 4.2, reviews: 21, img: "https://picsum.photos/seed/blacktee/700/840",
-    desc: "desPremium Sound. Smarter Noise Control. All-Day Comfort.Experience an immersive listening experience with  Buds Pro (2nd generation) engineered to deliver rich, detailed audio while giving you greater control over the sounds around you. Powered by the Shop Galleria Buds Pro 2 combines powerful  Noise Cancellation, Adaptive Transparency, Personalised Spatial Audio and intuitive touch controls in a compact, comfortable design. "
+    id: "black-basic-tee",
+    name: "Black to Basic Tee",
+    brand: "Nike",
+    category: "T-Shirts",
+    price: 150,
+    tag: "",
+    rating: 4.2,
+    reviews: 21,
+    img: "https://picsum.photos/seed/blacktee/700/840",
+    desc: "Premium Sound. Smarter Noise Control. All-Day Comfort. Experience an immersive listening experience with Buds Pro 2, engineered to deliver rich, detailed audio while giving you greater control over the sounds around you."
   },
   {
-    id: "soft-hoodie", name: "Soft Hoodie", brand: "Adidas", category: "Sweaters", price: 250, tag: "", rating: 4.8, reviews: 52, img: "https://picsum.photos/seed/softhoodie/700/840",
+    id: "soft-hoodie",
+    name: "Soft Hoodie",
+    brand: "Adidas",
+    category: "Sweaters",
+    price: 250,
+    tag: "",
+    rating: 4.8,
+    reviews: 52,
+    img: "https://picsum.photos/seed/softhoodie/700/840",
     desc: "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket."
   },
   {
-    id: "white-off-jacket", name: "White Off Jacket 2024", brand: "Zara", category: "Jassen", price: 150, tag: "", rating: 4.1, reviews: 14, img: "https://picsum.photos/seed/whiteoff/700/840",
+    id: "white-off-jacket",
+    name: "White Off Jacket 2024",
+    brand: "Zara",
+    category: "Jassen",
+    price: 150,
+    tag: "",
+    rating: 4.1,
+    reviews: 14,
+    img: "https://picsum.photos/seed/whiteoff/700/840",
     desc: "Lightweight off-white jacket with a quilted finish and a relaxed fit, built for transitional weather layering."
   },
   {
-    id: "lawyer-suit", name: "One Set Lawyer Suit", brand: "Zara", category: "Overhemden", price: 150, tag: "", rating: 4.4, reviews: 19, img: "https://picsum.photos/seed/lawyersuit/700/840",
+    id: "lawyer-suit",
+    name: "One Set Lawyer Suit",
+    brand: "Zara",
+    category: "Overhemden",
+    price: 150,
+    tag: "",
+    rating: 4.4,
+    reviews: 19,
+    img: "https://picsum.photos/seed/lawyersuit/700/840",
     desc: "A tailored two-piece set with a structured shoulder and a clean, minimal silhouette suited for the office or a night out."
-  },
-
+  }
 ];
 
 const state = { search: "", brands: new Set(), categories: new Set(), maxPrice: 500 };
