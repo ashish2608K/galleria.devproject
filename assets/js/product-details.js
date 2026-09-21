@@ -142,4 +142,3 @@ document.getElementById('resetFilters').addEventListener('click', () => {
 
 buildFilterOptions();
 render();
-

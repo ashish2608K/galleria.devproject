@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Galleria | Products </title>
+    <title> Galleria | Checkout </title>
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/custom-style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
                             </button>
                             <ul class="nav_item">
                                 <li class="nav_items"><a href="index.html">Home</a></li>
-                                <li class="nav_items"><a href="products.html">Products</a></li>
+                                <li class="nav_items"><a href="products-listing.html">Products</a></li>
                                 <li class="nav_items"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -73,62 +74,130 @@
     </nav>
     <!-- NAVBAR END -->
 
-
-    <header class="site-header">
-        <div class="search-wrap">
-            <input id="searchInput" type="text" placeholder="Search">
-            <span class="search-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </span>
-        </div>
-        <div class="result-count" id="resultCount"></div>
-    </header>
+    <!-- CHECKOUT START -->
     <div class="custom-container">
-        <div class="content-wrap">
-            <aside class="filters" id="filters">
-                <details class="filter-group ">
-                    <summary>Brand
-                        <span class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 24 13"
-                                fill="none">
-                                <path
-                                    d="M21.0713 0.707031C21.6839 0.0973414 22.6783 0.0973707 23.291 0.707031C23.9031 1.31601 23.903 2.30312 23.291 2.91211L14.3965 11.7627C13.1151 13.0375 11.0624 13.0778 9.73242 11.8828L9.60645 11.7637L0.708984 2.91895C0.09696 2.30998 0.0969843 1.32287 0.708984 0.713867C1.3217 0.104151 2.316 0.104151 2.92871 0.713867L10.5342 8.28223C11.3419 9.08595 12.6512 9.08618 13.459 8.28223L21.0713 0.707031Z"
-                                    fill="#3E5668" stroke="#E5E9ED" stroke-width="0.5" />
-                            </svg>
-                        </span>
-                    </summary>
-                    <div class="filter-body" id="brandFilters"></div>
-                </details>
 
-                <details class="filter-group">
-                    <summary>Category
-                        <span class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 24 13"
-                                fill="none">
-                                <path
-                                    d="M21.0713 0.707031C21.6839 0.0973414 22.6783 0.0973707 23.291 0.707031C23.9031 1.31601 23.903 2.30312 23.291 2.91211L14.3965 11.7627C13.1151 13.0375 11.0624 13.0778 9.73242 11.8828L9.60645 11.7637L0.708984 2.91895C0.09696 2.30998 0.0969843 1.32287 0.708984 0.713867C1.3217 0.104151 2.316 0.104151 2.92871 0.713867L10.5342 8.28223C11.3419 9.08595 12.6512 9.08618 13.459 8.28223L21.0713 0.707031Z"
-                                    fill="#3E5668" stroke="#E5E9ED" stro ke-width="0.5" />
-                            </svg>
-                        </span>
-                    </summary>
-                    <div class="filter-body" id="categoryFilters"></div>
-                </details>
+        <div class="checkout-breadcrumb">
+            <span class="current">Cart</span> <span>›</span> <span class="current">Shipping</span> <span>›</span>
+            <span>Payment</span>
+        </div>
 
-                <details class="filter-group price-bar">
-                    <summary>Price</summary>
-                    <div class="filter-body price-body">
-                        <input type="range" id="priceRange" min="0" max="500" value="500" step="5">
-                        <div class="price-display">Up to $<span id="priceValue">500</span></div>
+        <div class="checkout-wrap">
+
+            <div class="checkout-form">
+                <h2>Shipping Address</h2>
+
+                <form id="shippingForm">
+                    <div class="form-row two-col">
+                        <div class="field">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" required placeholder="First name">
+                        </div>
+                        <div class="field">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="lastName" required placeholder="Last name">
+                        </div>
                     </div>
-                </details>
-                <button class="reset-btn" id="resetFilters">Reset filters</button>
+
+                    <div class="form-row two-col">
+                        <div class="field">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone number*</label>
+                            <div class="phone-field">
+                                <select id="phoneCode">
+                                    <option value="+91">IN +91</option>
+                                    <option value="+1">US +1</option>
+                                    <option value="+44">UK +44</option>
+                                </select>
+                                <input type="tel" id="phone" required placeholder="Phone number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row three-col">
+                        <div class="field">
+                            <label for="city">City*</label>
+                            <input type="text" id="city" required placeholder="City">
+                        </div>
+                        <div class="field">
+                            <label for="state">State*</label>
+                            <input type="text" id="state" required placeholder="State">
+                        </div>
+                        <div class="field">
+                            <label for="zip">Zip Code*</label>
+                            <input type="text" id="zip" required placeholder="Zip code">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="description">Description*</label>
+                            <textarea id="description" rows="4" placeholder="Enter a description..."></textarea>
+                        </div>
+                    </div>
+
+                    <h3 class="shipping-method-label">Shipping Method</h3>
+                    <div class="shipping-methods" id="shippingMethods">
+                        <label class="shipping-method active">
+                            <input type="radio" name="shippingMethod" value="0" checked>
+                            <span class="dot"></span>
+                            <span class="method-text">
+                                <span class="method-name">Free Shipping</span>
+                                <span class="method-time">7-20 Days</span>
+                            </span>
+                            <span class="method-price">$0</span>
+                        </label>
+                        <label class="shipping-method">
+                            <input type="radio" name="shippingMethod" value="9">
+                            <span class="dot"></span>
+                            <span class="method-text">
+                                <span class="method-name">Express Shipping</span>
+                                <span class="method-time">1-3 Days</span>
+                            </span>
+                            <span class="method-price">$9</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="checkout-cart">
+                <h2>Your Cart</h2>
+
+                <div class="cart-items" id="cartItems"></div>
+
+                <div class="discount-row">
+                    <input type="text" id="discountCode" placeholder="Discount code">
+                    <button type="button" id="applyDiscount">Apply</button>
+                </div>
+
+                <div class="totals">
+                    <div class="totals-row">
+                        <span>Subtotal</span>
+                        <span id="subtotalValue">$0.00</span>
+                    </div>
+                    <div class="totals-row">
+                        <span>Shipping</span>
+                        <span id="shippingValue">$0</span>
+                    </div>
+                    <div class="totals-row">
+                        <span>Estimated taxes</span>
+                        <span id="taxValue">$0.00</span>
+                    </div>
+                    <div class="totals-row total">
+                        <span>Total</span>
+                        <span id="totalValue">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="continue-btn" id="continueBtn">Continue to Payment</button>
             </aside>
-            <main class="product-grid" id="productGrid"></main>
+
         </div>
     </div>
+    <!-- CHECKOUT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -250,6 +319,6 @@
 <script src="assets/js/nav.js"></script>
 <script src="assets/js/products-listing.js"></script>
 <script src="assets/js/cart.js"></script>
-<script src="assets/js/product-detail.js"></script>
+<script src="assets/js/checkout.js"></script>
 
 </html>

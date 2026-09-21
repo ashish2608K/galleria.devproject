@@ -13,4 +13,5 @@
 @import url("shipping-policy.css");
 @import url("legal-notice.css");
 @import url("products.css");
-/* @import url("product-detail.css"); */
+@import url("checkout.css")
+/* /* * @import url("product-detail.css"); */
