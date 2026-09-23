@@ -56,10 +56,12 @@
 
       return `
         <div class="cart-item" data-id="${item.id}">
+        <div class="img-box">
           <div class="thumb">
-            <img src="${img}" alt="${name}">
-            <span class="qty-badge">${item.qty}</span>
+              <img src="${img}" alt="${name}">
           </div>
+           <span class="qty-badge">${item.qty}</span>
+        </div>
           <div class="info">
             <p class="name">${name}</p>
             <p class="meta">${category}</p>

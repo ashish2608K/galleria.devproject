@@ -17,6 +17,36 @@ navCartbtn.addEventListener("click", (e) => {
 })
 
 
+// TRANDING NOW SETION SWIPER START
+
+const trandSwiper = new Swiper(".joureny__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".tranding_now_pagination",   // ← confirm this line exists
+    clickable: true,
+  },
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
+
+    1200: {
+      slidesPerView: 4,
+      spaceBetween:10,
+    }
+  }
+
+});
+
+
+
 
 
 /* FAQ SECTION JS END */

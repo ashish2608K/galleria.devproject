@@ -84,10 +84,55 @@
 
 /* BANNER SECTION END */
 
+
+/* Outer card-carousel pagination */
+.tranding_now_section .tranding_now_pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: min(max(1.5625rem, 2.6042vw), 3.125rem);
+}
+
+.tranding_now_section .tranding_now_pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    opacity: 1;
+    margin: 0 !important;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tranding_now_section .tranding_now_pagination .swiper-pagination-bullet:hover {
+    background: #a8a8a8;
+}
+
+.tranding_now_section .tranding_now_pagination .swiper-pagination-bullet-active {
+    width: 24px;
+    border-radius: 999px;
+    background: #171717;
+    animation: pill-pop-outer 0.35s ease;
+}
+
+@keyframes pill-pop-outer {
+    0% {
+        width: 8px;
+        background: #d9d9d9;
+    }
+
+    100% {
+        width: 24px;
+        background: #171717;
+    }
+}
+
 /*  TRENDING NOW SECTION  */
 .tranding_now_section {
     padding-top: min(max(3.4375rem, 5.2083vw), 6.25rem);
     padding-bottom: min(max(3.4375rem, 5.2083vw), 6.25rem);
+    overflow: hidden;
 }
 
 .tranding_now_section .tranding_now_inner .row {
@@ -97,6 +142,10 @@
     gap: 24px;
 }
 
+.tranding_now_section .swiper-pagination-bullet-active{
+    background-color: #000;
+}
+
 
 .tranding_now_section .tranding_now_inner .row .col-12.col-lg-12.d-flex {
     display: flex;
@@ -104,6 +153,7 @@
     gap: 80px;
     width: 100%;
 }
+
 
 
 .tranding_now_section .tranding_now_inner .col-12.col-lg-4 {
@@ -137,7 +187,7 @@
     max-width: min(max(10.9375rem, 18.2292vw), 21.875rem);
     height: 100%;
     position: relative;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 36%);
+    overflow: hidden;
 }
 
 .tranding_now_section .product_cards .img_wrap {
@@ -147,10 +197,18 @@
     overflow: hidden;
 }
 
+.product_cards .img_wrap {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
 .tranding_now_section .product_cards .img_wrap .img_swiper {
     width: 100%;
+    overflow: hidden;
     /* height: 260px; */
 }
+
+
 
 .tranding_now_section .product_cards .img_wrap .img_swiper .swiper-slide {
     display: flex;
@@ -447,6 +505,19 @@
 
     .discover_premium_section .promise_icons_items {
         width: 80px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .discover_premium_section .promise_icons_list {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:393px) {
+
+    .discover_premium_section .promise_icons_list {
+        gap: 10px;
     }
 }
 
@@ -920,8 +991,8 @@
         padding-top: 30px;
         padding-bottom: 88px;
     }
-    
-    .footer-tagline{
+
+    .footer-tagline {
         font-size: 14px;
     }
 
