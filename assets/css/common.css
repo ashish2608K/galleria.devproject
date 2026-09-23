@@ -35,7 +35,7 @@
     background: #171717;
     color: #fff;
     text-align: center;
-    padding: min(max(1.5625rem, 0.7813vw), 0.9375rem);
+    padding: 10px min(max(1.5625rem, 0.7813vw), 0.9375rem);
     border-radius: 999px;
     font-size: 15px;
     font-weight: 600;
@@ -48,7 +48,7 @@
     justify-content: center;
     width: fit-content;
     background: #171717;
-    padding: 14px min(max(1.5625rem, 1.5625vw), 1.875rem);
+    padding: min(max(0.5625rem, 0.7292vw), 0.875rem) min(max(1.5625rem, 1.5625vw), 1.875rem);
     border-radius: 999px;
     transition: background 0.2s ease;
 }

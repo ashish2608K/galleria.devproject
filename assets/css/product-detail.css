@@ -11,24 +11,10 @@
   --bg: #f7f6f3;
   --primary-bg: #ebebeb;
   --text: #1c1c1c;
-  --gold: #b8860b;
+
   --gold-dark: #8a6508;
   --border: #1c1c1c;
   --muted: #8a8a8a;
-}
-
-.pdp-breadcrumb {
-  margin: 24px 0 0;
-  font-size: 13px;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.pdp-breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
 }
 
 .pdp-breadcrumb .current {

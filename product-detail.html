@@ -78,11 +78,6 @@
 
     <!-- PRODUCT DETAIL START -->
     <div class="custom-container">
-        <div class="pdp-breadcrumb">
-            <a href="index.html">Home</a> <span>›</span> <a href="products.html">Products</a> <span>›</span>
-            <span class="current">Product details</span>
-        </div>
-
         <div class="pdp-wrap">
 
             <div class="pdp-gallery">
@@ -370,17 +365,6 @@
         document.title = `${name} — Galleria`;
 
 
-        //  ACTIONS (demo only  
-        document.getElementById("addToCart").addEventListener("click", () => {
-            addToCart(id, 1);
-            window.location.href = "checkout.html";
-        });
-
-        document.getElementById("wishBtn").addEventListener("click", (e) => {
-            e.target.classList.toggle("active");
-            e.target.textContent = e.target.classList.contains("active") ? "♥" : "♡";
-        });
-
         //  RELATED PRODUCTS 
         function relatedCardHTML(p) {
             const pId = field(p, "id", "slug");
@@ -389,12 +373,12 @@
             const pPrice = field(p, "price");
             const pCategory = field(p, "category");
             return `
-      <div class="pdp-related-card">
-        <div class="pdp-related-img"><img src="${pImg}" alt="${pName}"></div>
-        <p class="pdp-related-name">${pName}</p>
-        <p class="pdp-related-meta">${pCategory} · $${Number(pPrice).toFixed(0)}</p>
-        <a class="pdp-related-link" href="product-detail.html?id=${pId}">View product</a>
-      </div>`;
+                <div class="pdp-related-card">
+                    <div class="pdp-related-img"><img src="${pImg}" alt="${pName}"></div>
+                    <p class="pdp-related-name">${pName}</p>
+                    <p class="pdp-related-meta">${pCategory} · $${Number(pPrice).toFixed(0)}</p>
+                    <a class="pdp-related-link" href="product-detail.html?id=${pId}">View product</a>
+                </div>`;
         }
 
         const related = products.filter(p => field(p, "id", "slug") !== id).slice(0, 4);
