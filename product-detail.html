@@ -316,6 +316,11 @@
             return "";
         }
 
+        document.getElementById("addToCart").addEventListener("click", () => {
+            addToCart(id, 1);               // saves to localStorage via cart.js
+            window.location.href = "checkout.html";
+        });
+
         const params = new URLSearchParams(window.location.search);
         const requestedId = params.get("id");
         const product =
