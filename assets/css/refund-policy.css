@@ -2,8 +2,8 @@
     padding-bottom: 20px;
 }
 
-.refund_policy_section .content_area .cnt_wrap p + p,
-.refund_policy_section .cnt_wrap p + p {
+.refund_policy_section .content_area .cnt_wrap p+p,
+.refund_policy_section .cnt_wrap p+p {
     padding-top: 10px;
 }
 
@@ -19,3 +19,4 @@
 .refund_policy_section strong {
     font-weight: 600;
 }
+

@@ -48,7 +48,7 @@
     justify-content: center;
     width: fit-content;
     background: #171717;
-    padding: 14px min(max(1.5625rem,1.5625vw),1.875rem);
+    padding: 14px min(max(1.5625rem, 1.5625vw), 1.875rem);
     border-radius: 999px;
     transition: background 0.2s ease;
 }
@@ -911,6 +911,30 @@ p {
     padding-left: 20.333vw;
     padding-right: 20.333vw;
 }
+
+@media screen and (max-width: 767px) {
+    .custom-custom-container {
+        padding-left: 10.333vw;
+        padding-right: 7.333vw;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .small-custom-container {
+        padding-left: 7.333vw;
+        padding-right: 8.333vw;
+    }
+}
+
+
+@media screen and (max-width:991px) {
+    .small-custom-container {
+        padding-left: 7.333vw;
+        padding-right: 8.333vw;
+    }
+}
+
+@media screen and (max-width:767px) {}
 
 @media screen and (max-width: 1199px) {}
 

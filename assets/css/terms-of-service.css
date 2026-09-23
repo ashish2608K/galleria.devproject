@@ -41,7 +41,6 @@
     letter-spacing: 0.2px;
 }
 
-/* reuse the icon-row styling from the contact page for Section 25 */
 .terms_of_service_section .customer_support_list {
     display: flex;
     flex-direction: column;
@@ -53,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-direction: inherit;
 }
 
 .terms_of_service_section .customer_support_item .svg_image {
