@@ -84,7 +84,7 @@ const products = [
 
 const state = { search: "", brands: new Set(), categories: new Set(), maxPrice: 500 };
 
-// ---------------- BUILD FILTER OPTIONS ----------------
+// BUILD FILTER OPTIONS 
 function buildFilterOptions() {
   const brandCounts = {};
   const categoryCounts = {};
