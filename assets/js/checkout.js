@@ -35,7 +35,7 @@
     const cart = getCart();
 
     if (!cart.length) {
-      cartItemsEl.innerHTML = `<div class="cart-empty">Your cart is empty. <a href="products.html">Browse products →</a></div>`;
+      cartItemsEl.innerHTML = `<div class="cart-empty">Your cart is empty. <a href="products-listing.html">Browse products →</a></div>`;
       updateTotals(0);
       if (continueBtn) continueBtn.disabled = true;
       return;
