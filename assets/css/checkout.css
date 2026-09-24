@@ -144,7 +144,9 @@
   gap: 2px;
 }
 
-.method-name {
+.method-name  {
+  display: flex;
+  gap: 10px;
   font-size: 14px;
   font-weight: 700;
   color: var(--primary-text-color);
@@ -206,6 +208,48 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ---------------- UPI LOGOS ---------------- */
+.method-text .upi-log {
+  margin: 4px 0 6px;
+}
+
+.method-text .upi-log img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.method-text .upi_companies {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+}
+
+.method-text .upi_companies li.upi_companies {
+  width: 26px;
+  height: 26px;
+  /* border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--border) 16%, transparent);
+  background: var(--theme-white); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.method-text .upi_companies li.upi_companies img {
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 60px;
+  height: 37px;
+  object-fit: contain;
 }
 
 .cart-item .qty-badge {

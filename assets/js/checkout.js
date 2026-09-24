@@ -1,9 +1,3 @@
-/* checkout.js
-   Loaded AFTER assets/js/products-listing.js and assets/js/cart.js.
-   Renders the cart (from localStorage via cart.js) against the real
-   product data (from products-listing.js), and keeps the totals in sync
-   as the shipping method or quantities change. */
-
 (function () {
   if (typeof products === "undefined" || !Array.isArray(products)) {
     console.warn("checkout.js: couldn't find the global `products` array from products-listing.js.");
